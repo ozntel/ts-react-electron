@@ -1,5 +1,19 @@
-import ReactDOM from 'react-dom';
+import { render, hydrate } from 'react-dom';
 import { App } from './App';
 import { RecoilRoot } from 'recoil';
 
-ReactDOM.render(<App />, document.getElementById('root'));
+const root = document.getElementById('root');
+
+const ReactRootComponent = () => {
+    return (
+        <RecoilRoot>
+            <App />
+        </RecoilRoot>
+    );
+};
+
+if (root.hasChildNodes()) {
+    hydrate(<ReactRootComponent />, root);
+} else {
+    render(<ReactRootComponent />, root);
+}
