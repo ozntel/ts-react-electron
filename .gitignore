@@ -4,3 +4,4 @@ packages
 .webpack
 out
 package-lock.json
+.DS_Store
