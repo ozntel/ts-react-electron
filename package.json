@@ -9,8 +9,7 @@
         "package": "electron-forge package",
         "make": "electron-forge make",
         "release": "electron-forge publish",
-        "lint": "eslint . --ext js,ts",
-        "test": "jest"
+        "lint": "eslint . --ext js,ts"
     },
     "keywords": [],
     "license": "MIT",
